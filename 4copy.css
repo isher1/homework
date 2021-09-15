@@ -3,12 +3,37 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Do Hyeon", sans-serif;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:active {
+  color: tomato;
 }
 
 .container {
   width: 380px;
   height: 830px;
-  border: 5px solid #5b120f;
+  border: 5px solid #202020;
+  border-radius: 10px;
+  overflow: scroll;
+  background-color: rgb(255, 255, 255);
+}
+
+main {
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  z-index: 2;
+  position: fixed;
+  width: 380px;
 }
 
 /*헤더*/
@@ -20,8 +45,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 30px;
+  margin: 25px 30px;
+  background-color: rgb(255, 255, 255);
 }
+
 .playlist__column {
   width: 40%;
 }
@@ -31,13 +58,6 @@ body {
 }
 
 /*1번째 섹션*/
-.now-playing,
-.now-playing__img,
-.now-playing__text,
-.now-playing__name,
-.now-playing__title {
-  border: 0.5px dashed #5b120f;
-}
 
 .now-playing__text {
   flex-direction: column;
@@ -86,6 +106,12 @@ body {
   border-radius: 15px;
   font-size: 20px;
   border-width: 2px 2px 6px 2px;
+  transition: 0.1s;
+}
+.play-icon__play:active,
+.play-icon__like:active,
+.play-icon__add:active {
+  border-width: 2px 2px 2px 2px;
 }
 
 .play-icon__play i {
@@ -100,6 +126,7 @@ body {
   border: 2px solid black;
   border-radius: 50%;
   border-width: 2px 2px 6px 2px;
+  transition: 0.1s;
 }
 
 /*3번째 섹션*/
@@ -109,12 +136,12 @@ ul {
   padding-left: 0px;
 }
 .play-box {
+  margin-top: 400px;
   flex-direction: column;
   align-items: flex-start;
 }
 .play-box__list {
   display: flex;
-
   margin-bottom: 45px;
 }
 .play-box__list-icon img {
@@ -127,14 +154,19 @@ ul {
 }
 
 .play-box__list-text {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
 .play-box__list-text-title {
   font-weight: 900;
   font-size: 20px;
+  line-height: 80%;
+  margin-bottom: 10px;
 }
 
 .play-box__list-text-name {
   opacity: 0.6;
+  line-height: 80%;
 }
