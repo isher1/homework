@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.container {
+  width: 380px;
+  height: 830px;
+  border: 5px solid #5b120f;
+}
+
+/*헤더*/
+
+.playlist,
+.now-playing,
+.play-icon,
+.play-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 30px;
+}
+.playlist__column {
+  width: 40%;
+}
+.playlist__title {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+/*1번째 섹션*/
+.now-playing,
+.now-playing__img,
+.now-playing__text,
+.now-playing__name,
+.now-playing__title {
+  border: 0.5px dashed #5b120f;
+}
+
+.now-playing__text {
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.now-playing__img {
+  width: 120px;
+  height: 120px;
+  border-radius: 15%;
+}
+
+.now-playing__img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 15%;
+}
+
+.now-playing__title {
+  font-size: 35px;
+  line-height: 100%;
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
+
+.now-playing__name {
+  opacity: 0.8;
+}
+
+/*2번째 섹션*/
+.play-icon {
+  justify-content: space-between;
+}
+.play-icon__play,
+.play-icon__like,
+.play-icon__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-icon__play {
+  width: 150px;
+  height: 55px;
+  border: 2px solid black;
+  border-radius: 15px;
+  font-size: 20px;
+  border-width: 2px 2px 6px 2px;
+}
+
+.play-icon__play i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+.play-icon__like,
+.play-icon__add {
+  width: 55px;
+  height: 55px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-width: 2px 2px 6px 2px;
+}
+
+/*3번째 섹션*/
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.play-box {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.play-box__list {
+  display: flex;
+
+  margin-bottom: 45px;
+}
+.play-box__list-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+  margin-right: 15px;
+  border: 1px solid rgb(59, 59, 59);
+  background-color: rgb(59, 59, 59);
+}
+
+.play-box__list-text {
+  flex-direction: column;
+}
+
+.play-box__list-text-title {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.play-box__list-text-name {
+  opacity: 0.6;
+}
