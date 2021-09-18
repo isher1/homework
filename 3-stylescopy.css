@@ -1,0 +1,106 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #6bbcbe;
+  width: 430px;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__dot {
+  display: flex;
+  margin-bottom: 70px;
+  animation: container__dot 2s infinite;
+  transform-origin: 50%;
+  gap: 15px;
+  animation-delay: 0.1s;
+}
+
+.container__dot span {
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+@keyframes container__dot {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container__wave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 60px;
+}
+
+.container__wave div {
+  margin: 2px;
+  background-color: white;
+  width: 8px;
+  height: 30px;
+  animation: div ease-in-out 1s infinite;
+}
+.container__wave div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.container__wave div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.container__wave div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.container__wave div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.container__wave div:nth-child(5) {
+  animation-delay: 0.5s;
+}
+@keyframes div {
+  0% {
+    transform: scaleY(100%);
+  }
+  30% {
+    transform: scaleY(100%);
+  }
+
+  50% {
+    transform: scaleY(200%);
+  }
+
+  70% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
